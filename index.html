@@ -3,42 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adslath — Foundation Architecture (Phase 1)</title>
+    <title>Adslath — Self-Hosted Modular Advertising Ecosystem</title>
+    
+    <!-- Core & Layout Styles -->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- Adslath Widget Design System -->
+    <link rel="stylesheet" href="assets/css/adslath-base.css">
+    <link rel="stylesheet" href="assets/css/adslath-cards.css">
+    <link rel="stylesheet" href="assets/css/adslath-responsive.css">
+    <link rel="stylesheet" href="assets/css/adslath-themes.css">
+    <link rel="stylesheet" href="assets/css/adslath-placement.css">
 </head>
 <body>
     <header class="adslath-header">
         <div class="container">
             <h1>Adslath Advertising Ecosystem</h1>
-            <p class="subtitle">Phase 1: Ultra Advanced Foundation Architecture & Data Management</p>
+            <p class="subtitle">Self-Hosted Private Ad Network & Modular Bot AI Engine</p>
         </div>
     </header>
 
     <main class="container adslath-main">
-        <section class="card status-card">
+        <!-- Section 1: System Diagnostic & Foundation Status -->
+        <section class="card status-card" style="margin-bottom: 2rem;">
             <h2>System Initialization & Diagnostic Report</h2>
-            <div id="diagnostic-output" class="diagnostic-console">
+            <div id="diagnostic-output" class="diagnostic-console" style="margin-top: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 0.375rem;">
                 <p class="loading">Initializing Adslath core modules...</p>
+            </div>
+            <div style="margin-top: 1.5rem;">
+                <a href="dashboard.html" target="_blank" class="dash-btn" style="text-decoration: none; display: inline-block; background-color: #2563eb; color: #fff; padding: 0.625rem 1.25rem; border-radius: 0.375rem; font-weight: 600;">Open Management Dashboard &rarr;</a>
             </div>
         </section>
 
-        <section class="card stats-card">
-            <h3>Foundation Inventory Statistics</h3>
-            <ul id="stats-list" class="stats-list">
-                <!-- Dynamically populated via diagnostic script -->
-            </ul>
+        <!-- Section 2: Live Integration Demos -->
+        <section class="card" style="padding: 1.5rem; margin-bottom: 2rem;">
+            <h2>Live Universal Script Integration Demos</h2>
+            <p style="color: var(--dash-text-muted, #94a3b8); margin-bottom: 1.5rem;">The automated engine detects categories and renders cards independently through clean script tags.</p>
+            
+            <div class="integration-demo-area" style="display: flex; flex-direction: column; gap: 2rem;">
+                <div>
+                    <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Placement 1: Gaming & Technology (Compact Card, Light Theme)</h3>
+                    <script src="assets/js/integration/adslath-loader.js" data-categories="gaming,technology" data-placement="auto" data-card-style="compact" data-theme="light" data-label="Sponsored"></script>
+                </div>
+
+                <div>
+                    <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Placement 2: Hosting & Development (Horizontal Banner, Dark Theme)</h3>
+                    <script src="assets/js/integration/adslath-loader.js" data-categories="hosting,development" data-placement="auto" data-card-style="horizontal-banner" data-theme="dark" data-label="Promoted"></script>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer class="adslath-footer">
+    <footer class="adslath-footer" style="margin-top: 3rem; padding: 1.5rem 0; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.1);">
         <div class="container">
-            <p>&copy; 2026 Adslath. Self-Hosted Modular Advertising Network.</p>
+            <p>&copy; 2026 Adslath. Self-Hosted Modular Advertising Network. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- Core Module Initialization (Module Script) -->
+    <!-- Core Module Initialization & Validation Script -->
     <script type="module">
         import { ADSLATH } from './assets/js/core/namespace.js';
         import './assets/js/core/adslath-config.js';
@@ -48,53 +72,34 @@
         import { CARD_STYLES } from './assets/js/data/card-styles.js';
         import { PLACEMENT_DATA } from './assets/js/data/placement-data.js';
         import { SCHEDULE_DATA } from './assets/js/data/schedule-data.js';
-        import { SETTINGS_DATA } from './assets/js/data/settings-data.js';
         import { ValidationUtils } from './assets/js/utils/validation.js';
-        import { DataUtils } from './assets/js/utils/data-utils.js';
         import { Logger } from './assets/js/utils/logger.js';
 
         const logger = new Logger('IndexDiagnostic');
         const output = document.getElementById('diagnostic-output');
-        const statsList = document.getElementById('stats-list');
 
         try {
-            logger.info('Starting Adslath Phase 1 Verification Suite.');
+            logger.info('Starting Adslath Ecosystem Verification.');
             
-            // Verify Namespace
             if (!window.ADSLATH || window.ADSLATH.version !== '1.0.0') {
                 throw new Error('Namespace initialization failed or version mismatch.');
             }
 
-            // Run structural validation checks
             const adValidation = ValidationUtils.validateAdvertisementList(ADSLATH_DATA.ads);
             const domainValidation = ValidationUtils.validateDomainList(DOMAINS_DATA.domains);
 
             output.innerHTML = `
-                <p class="success">[SUCCESS] Namespace window.ADSLATH initialized cleanly.</p>
-                <p class="success">[SUCCESS] Core configuration loaded: ${ADSLATH.config.systemName} v${ADSLATH.config.version}.</p>
-                <p class="success">[SUCCESS] Advertisements database verified: ${ADSLATH_DATA.ads.length} records (${adValidation.validCount} valid).</p>
-                <p class="success">[SUCCESS] Domain registry verified: ${DOMAINS_DATA.domains.length} domains (${domainValidation.validCount} valid).</p>
-                <p class="success">[SUCCESS] Category registry loaded: ${CATEGORIES_DATA.categories.length} categories.</p>
-                <p class="success">[SUCCESS] Card presentation styles loaded: ${CARD_STYLES.styles.length} styles.</p>
-                <p class="success">[SUCCESS] Placement configurations loaded: ${PLACEMENT_DATA.placements.length} placements.</p>
-                <p class="success">[SUCCESS] Campaign schedules loaded: ${SCHEDULE_DATA.schedules.length} campaigns.</p>
-                <p class="success">[SUCCESS] Settings & Utilities verified without errors.</p>
+                <p style="color: #4ade80; margin-bottom: 0.25rem;">[SUCCESS] Namespace window.ADSLATH initialized cleanly.</p>
+                <p style="color: #4ade80; margin-bottom: 0.25rem;">[SUCCESS] Core configuration loaded: ${ADSLATH.config.systemName} v${ADSLATH.config.version}.</p>
+                <p style="color: #4ade80; margin-bottom: 0.25rem;">[SUCCESS] Advertisements verified: ${ADSLATH_DATA.ads.length} records (${adValidation.validCount} valid).</p>
+                <p style="color: #4ade80; margin-bottom: 0.25rem;">[SUCCESS] Domain registry verified: ${DOMAINS_DATA.domains.length} domains (${domainValidation.validCount} valid).</p>
+                <p style="color: #4ade80; margin-bottom: 0.25rem;">[SUCCESS] Categories (${CATEGORIES_DATA.categories.length}), Styles (${CARD_STYLES.styles.length}), Placements (${PLACEMENT_DATA.placements.length}) loaded successfully.</p>
             `;
 
-            statsList.innerHTML = `
-                <li><strong>Loaded Ads:</strong> ${ADSLATH_DATA.ads.length}</li>
-                <li><strong>Registered Domains:</strong> ${DOMAINS_DATA.domains.length}</li>
-                <li><strong>Categories:</strong> ${CATEGORIES_DATA.categories.length}</li>
-                <li><strong>Card Styles:</strong> ${CARD_STYLES.styles.length}</li>
-                <li><strong>Placements:</strong> ${PLACEMENT_DATA.placements.length}</li>
-                <li><strong>Active Schedules:</strong> ${SCHEDULE_DATA.schedules.length}</li>
-                <li><strong>Debug Mode:</strong> ${ADSLATH.config.debugMode ? 'Enabled' : 'Disabled'}</li>
-            `;
-
-            logger.info('Adslath Phase 1 verification completed successfully.');
+            logger.info('Adslath system verification completed successfully.');
         } catch (error) {
             logger.error('Verification failed:', error);
-            output.innerHTML = `<p class="error">[ERROR] ${error.message}</p>`;
+            output.innerHTML = `<p style="color: #f87171;">[ERROR] ${error.message}</p>`;
         }
     </script>
 </body>
