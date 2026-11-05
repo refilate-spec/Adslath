@@ -1,0 +1,15 @@
+.dash-analytics-summary {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.dash-badge {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 0.25rem;
+    background-color: rgba(16, 185, 129, 0.2);
+    color: var(--dash-success);
+}
