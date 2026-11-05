@@ -1,0 +1,17 @@
+/**
+ * @file adslath-responsive.css
+ * @description Responsive rules for Adslath widgets.
+ */
+@media (min-width: 768px) {
+    .adslath-card.adslath-card-banner-h,
+    .adslath-card.adslath-card-native {
+        flex-direction: row;
+        max-height: 180px;
+    }
+
+    .adslath-card.adslath-card-banner-h .adslath-card-image-container,
+    .adslath-card.adslath-card-native .adslath-card-image-container {
+        width: 35%;
+        height: auto;
+    }
+}
