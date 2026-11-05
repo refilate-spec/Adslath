@@ -1,0 +1,16 @@
+/**
+ * @file adslath-base.css
+ * @description Isolated CSS scoping and reset for Adslath widgets.
+ */
+.adslath-widget-wrapper {
+    all: initial;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 1.5rem 0;
+}
+
+.adslath-widget-wrapper *, .adslath-widget-wrapper *::before, .adslath-widget-wrapper *::after {
+    box-sizing: border-box;
+}
