@@ -1,0 +1,21 @@
+/**
+ * @file adslath-themes.css
+ * @description Theme support (light/dark) for Adslath widgets.
+ */
+.adslath-widget-wrapper.adslath-theme-dark .adslath-card {
+    background: #1e293b;
+    border-color: #334155;
+    color: #f8fafc;
+}
+
+.adslath-widget-wrapper.adslath-theme-dark .adslath-card-title {
+    color: #ffffff;
+}
+
+.adslath-widget-wrapper.adslath-theme-dark .adslath-card-description {
+    color: #94a3b8;
+}
+
+.adslath-widget-wrapper.adslath-theme-dark .adslath-card-image-container {
+    background: #0f172a;
+}
