@@ -1,0 +1,17 @@
+@media (max-width: 768px) {
+    .adslath-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .adslath-main {
+        padding: 1.5rem 0;
+    }
+
+    .card {
+        padding: 1.25rem;
+    }
+
+    .stats-list {
+        grid-template-columns: 1fr;
+    }
+}
