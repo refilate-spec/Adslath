@@ -1,0 +1,61 @@
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.card h2, .card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.diagnostic-console {
+    background-color: #090d16;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.diagnostic-console p.success {
+    color: #4ade80;
+}
+
+.diagnostic-console p.error {
+    color: #f87171;
+}
+
+.diagnostic-console p.loading {
+    color: #fbbf24;
+}
+
+.stats-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.stats-list li {
+    background-color: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.stats-list li strong {
+    color: #ffffff;
+    display: block;
+    font-size: 1.1rem;
+    margin-top: 0.25rem;
+}
