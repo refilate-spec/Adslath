@@ -63,7 +63,27 @@ export const ADSLATH_DATA = Object.freeze({
             blockedDomains: [],
             createdAt: "2026-01-10T00:00:00Z",
             updatedAt: "2026-01-10T00:00:00Z"
-        }
+        }, 
+        {
+    id: "ad-004",
+    title: "New Product Promo",
+    description: "Description of product...",
+    image: "[https://example.com/image.webp](https://example.com/image.webp)",
+    targetUrl: "[https://example.com](https://example.com)",
+    categories: ["technology", "software"],
+    tags: ["tools"],
+    status: "active",
+    priority: 5,
+    weight: 10,
+    campaignId: "campaign-004",
+    startDate: null,
+    endDate: null,
+    allowedDomains: [],
+    blockedDomains: [],
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+}
+
     ]
 });
 
