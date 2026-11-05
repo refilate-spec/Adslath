@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adslath — Management & Analytics Dashboard</title>
+    <link rel="stylesheet" href="assets/css/dashboard/dashboard.css">
+    <link rel="stylesheet" href="assets/css/dashboard/dashboard-layout.css">
+    <link rel="stylesheet" href="assets/css/dashboard/dashboard-components.css">
+    <link rel="stylesheet" href="assets/css/dashboard/dashboard-analytics.css">
+    <link rel="stylesheet" href="assets/css/dashboard/dashboard-forms.css">
+    <link rel="stylesheet" href="assets/css/dashboard/dashboard-responsive.css">
+</head>
+<body class="adslath-dashboard-body">
+
+    <!-- Sidebar Navigation -->
+    <aside class="adslath-sidebar">
+        <div class="adslath-sidebar-header">
+            <h2>Adslath</h2>
+            <span>Management Console</span>
+        </div>
+        <ul class="adslath-nav">
+            <li><a href="#overview" class="active"><span>Overview</span></a></li>
+            <li><a href="#ads"><span>Advertisements</span></a></li>
+            <li><a href="#domains"><span>Domains</span></a></li>
+            <li><a href="#categories"><span>Categories</span></a></li>
+            <li><a href="#campaigns"><span>Campaigns</span></a></li>
+            <li><a href="#placements"><span>Placements</span></a></li>
+            <li><a href="#styles"><span>Card Styles</span></a></li>
+            <li><a href="#analytics"><span>Analytics</span></a></li>
+            <li><a href="#reports"><span>Reports</span></a></li>
+            <li><a href="#activity"><span>Activity Logs</span></a></li>
+            <li><a href="#diagnostics"><span>Diagnostics</span></a></li>
+            <li><a href="#settings"><span>Settings & Backup</span></a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="adslath-main-content" id="dashboard-content">
+        <!-- Rendered dynamically via DashboardRouter -->
+    </main>
+
+    <!-- Core Module & Dashboard Initialization -->
+    <script type="module">
+        import { ADSLATH } from './assets/js/core/namespace.js';
+        import './assets/js/core/adslath-config.js';
+        import './assets/js/core/storage-engine.js';
+        import './assets/js/dashboard/dashboard-engine.js';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.ADSLATH && window.ADSLATH.modules && window.ADSLATH.modules.dashboardEngine) {
+                window.ADSLATH.modules.dashboardEngine.init();
+            }
+        });
+    </script>
+</body>
+</html>
