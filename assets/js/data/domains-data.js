@@ -48,7 +48,22 @@ export const DOMAINS_DATA = Object.freeze({
             fallbackEnabled: true,
             maxAdsPerPage: 2,
             allowedCardStyles: ["minimal", "dark-glass"]
-        }
+        }, 
+        {
+    id: "domain-004",
+    hostname: "shop.example.com",
+    status: "active",
+    allowSubdomains: false,
+    allowedCategories: ["shopping", "fashion"],
+    blockedCategories: ["crypto"],
+    allowedTags: [],
+    blockedTags: [],
+    defaultCategory: "shopping",
+    fallbackEnabled: true,
+    maxAdsPerPage: 4,
+    allowedCardStyles: ["compact", "premium-image"]
+}
+
     ]
 });
 
