@@ -1,0 +1,61 @@
+.adslath-sidebar {
+    width: 260px;
+    background-color: var(--dash-card-bg);
+    border-right: 1px solid var(--dash-border);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.adslath-sidebar-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--dash-border);
+}
+
+.adslath-sidebar-header h2 {
+    font-size: 1.25rem;
+    color: #ffffff;
+}
+
+.adslath-sidebar-header span {
+    font-size: 0.75rem;
+    color: var(--dash-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.adslath-nav {
+    list-style: none;
+    padding: 1rem 0;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.adslath-nav li a {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    color: var(--dash-text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.adslath-nav li a:hover, .adslath-nav li a.active {
+    color: #ffffff;
+    background-color: rgba(59, 130, 246, 0.1);
+    border-left: 3px solid var(--dash-primary);
+}
+
+.adslath-main-content {
+    margin-left: 260px;
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
