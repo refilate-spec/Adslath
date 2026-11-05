@@ -1,0 +1,10 @@
+/**
+ * @file adslath-placement.css
+ * @description Placement container grid and layout styles.
+ */
+.adslath-placement-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 100%;
+}
