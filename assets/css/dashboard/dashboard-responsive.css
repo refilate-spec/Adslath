@@ -1,0 +1,12 @@
+@media (max-width: 768px) {
+    .adslath-sidebar {
+        width: 70px;
+    }
+    .adslath-sidebar-header h2, .adslath-sidebar-header span, .adslath-nav span {
+        display: none;
+    }
+    .adslath-main-content {
+        margin-left: 70px;
+        padding: 1rem;
+    }
+}
